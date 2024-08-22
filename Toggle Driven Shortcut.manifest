@@ -1,0 +1,13 @@
+{
+	"autodeskProduct":	"Fusion",
+	"type":	"addin",
+	"id":	"2412048a-5ef4-4bf6-98a3-7080c2b3260c",
+	"author":	"Thomas White",
+	"description":	{
+		"":	""
+	},
+	"version":	"0.1",
+	"runOnStartup":	true,
+	"supportedOS":	"windows|mac",
+	"editEnabled":	true
+}
