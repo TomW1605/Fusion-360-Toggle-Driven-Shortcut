@@ -76,7 +76,7 @@ def stop():
 # This defines the contents of the command dialog and connects to the command related events.
 def command_created(args: adsk.core.CommandCreatedEventArgs):
     # General logging for debug.
-    futil.log(f'{CMD_NAME} Command Created Event')
+    # futil.log(f'{CMD_NAME} Command Created Event')
     futil.add_handler(args.command.execute, command_execute, local_handlers=local_handlers)
     args.command.execute.cast()
 
@@ -84,7 +84,7 @@ def command_created(args: adsk.core.CommandCreatedEventArgs):
 # This event handler is called when the user clicks the OK button in the command dialog or 
 # is immediately called after the created event not command inputs were created for the dialog.
 def command_execute(args: adsk.core.CommandEventArgs):
-    futil.log(f'{CMD_NAME} Command Execute Event')
+    # futil.log(f'{CMD_NAME} Command Execute Event')
     try:
         for selection in ui.activeSelections:
             if issubclass(selection.entity.__class__, adsk.fusion.SketchDimension):
