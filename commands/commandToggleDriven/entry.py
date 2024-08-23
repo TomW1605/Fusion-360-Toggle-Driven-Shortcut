@@ -23,7 +23,6 @@ IS_PROMOTED = False
 # will insert it at the end.
 WORKSPACE_ID = 'FusionSolidEnvironment'
 PANEL_ID = 'SolidScriptsAddinsPanel'
-COMMAND_BESIDE_ID = 'ScriptsManagerCommand'
 
 # Resource location for command icons, here we assume a sub folder in this directory named "resources".
 ICON_FOLDER = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'resources', '')
@@ -49,7 +48,8 @@ def start():
     panel = workspace.toolbarPanels.itemById(PANEL_ID)
 
     # Create the button command control in the UI after the specified existing command.
-    control = panel.controls.addCommand(cmd_def, COMMAND_BESIDE_ID, False)
+    panel.controls.addSeparator()
+    control = panel.controls.addCommand(cmd_def)
 
     # Specify if the command is promoted to the main toolbar. 
     control.isPromoted = IS_PROMOTED
