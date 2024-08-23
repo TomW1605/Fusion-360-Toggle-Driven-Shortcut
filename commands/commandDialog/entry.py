@@ -15,7 +15,7 @@ CMD_NAME = 'Toggle Driven'
 CMD_Description = 'Toggle driven/driving on a dimention'
 
 # Specify that the command will be promoted to the panel.
-IS_PROMOTED = True
+IS_PROMOTED = False
 
 # TODO *** Define the location where the command button will be created. ***
 # This is done by specifying the workspace, the tab, and the panel, and the 
